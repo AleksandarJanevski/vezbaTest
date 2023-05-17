@@ -10,7 +10,7 @@ app.use(express.json());
 db.init();
 
 app.route('/brand').get(brandHandler.get).post(brandHandler.create);
-app.route('/brand:id').patch(brandHandler.update).delete(brandHandler.delete)
+app.route('/brand/:id').patch(brandHandler.update).delete(brandHandler.delete)
 app.route('/car').get(carHandler.get).post(carHandler.create);
 app.route('/car/:id').patch(carHandler.update).delete(carHandler.delete)
 
