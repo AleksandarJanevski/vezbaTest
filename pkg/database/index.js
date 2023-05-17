@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: `${__dirname}/../../config.env` });
 
 
-let DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD).replace('NAME', 'TestPractice')
+let DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD).replace('NAME', 'TestPractice');
 
 exports.init = async () => {
     try {
@@ -16,4 +16,4 @@ exports.init = async () => {
     } catch (err) {
         return console.error(err)
     }
-}
+};

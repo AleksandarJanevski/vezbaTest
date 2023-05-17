@@ -11,11 +11,11 @@ const brandSchema = new mongoose.Schema({
 }, {
     toJSON: { virtuals: true },
     toObject: { virtuals: true }
-})
+});
 
 brandSchema.virtual('pozdrav').get(function () {
     return 'Pozdrav od ' + this.name + ' timot'
-})
+});
 
-const brand = mongoose.model('brand', brandSchema)
-module.exports = brand
+const brand = mongoose.model('brand', brandSchema);
+module.exports = brand;

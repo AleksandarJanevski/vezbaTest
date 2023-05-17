@@ -1,11 +1,11 @@
-const mongoose = require('mongoose')
-const brand = require('../brandModel/brandSchema')
+const mongoose = require('mongoose');
+const brand = require('../brandModel/brandSchema');
 
 const carSchema = new mongoose.Schema({
     name: String,
     company: String,
     year: Number
-})
+});
 
 // carSchema.pre('save', async function (next) {
 //     try {
@@ -22,6 +22,6 @@ const carSchema = new mongoose.Schema({
 //         next(err)
 //     }
 // })
-const car = mongoose.model('car', carSchema)
+const car = mongoose.model('car', carSchema);
 
-module.exports = car
+module.exports = car;
